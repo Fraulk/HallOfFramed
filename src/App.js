@@ -36,7 +36,7 @@ function App() {
     setInitialized(true);
     const imagesResponse = await getImages({});
     const authorsResponse = await getAuthors({});
-    const normalizedImages = normalizeData(imagesResponse.data._default);
+    const normalizedImages = normalizeData(imagesResponse._default);
     const normalizedAuthors = normalizeData(authorsResponse.data._default);
     const formattedImages = addProperties(normalizedImages, normalizedAuthors);
 

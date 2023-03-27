@@ -354,3 +354,6 @@ MigrationBackup/
 
 build/asset-manifest.json
 build/index.html
+
+# Firebase secrets
+firebase.js

@@ -6,7 +6,14 @@ import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
+import firebaseConfig from "./firebase";
+import firebase from "firebase/compat/app"
+import "firebase/compat/database"
+
 const history = createBrowserHistory();
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.database();
 
 ReactDOM.render(
   <React.StrictMode>

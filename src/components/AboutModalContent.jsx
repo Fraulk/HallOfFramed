@@ -2,9 +2,10 @@ const AboutModalContent = () => {
   return (
     <div className="about-modal-content">
       {/* <img alt="Welcome to Framed" src={framedBanner}></img> */}
-      <h2>About the Hall of Framed</h2>
+      <h2>About the Hall of Fun</h2>
       <div className='about-modal-columns'>
         <section>
+          <p>This is the Hall of Fun version made for the April 1st.</p>
           <p>
             The <a href="https://framedsc.github.io/">Framed Screenshot Community</a> Discord server
             started in 2019 as a place to discuss and collaborate in the space of video game
