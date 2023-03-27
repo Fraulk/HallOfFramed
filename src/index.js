@@ -13,7 +13,7 @@ import "firebase/compat/database"
 const history = createBrowserHistory();
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
-const db = firebaseApp.database();
+firebaseApp.database();
 
 ReactDOM.render(
   <React.StrictMode>
