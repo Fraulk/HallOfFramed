@@ -1,6 +1,9 @@
 #!/bin/bash
 
-if [[ -f firebase.js ]] ; then rm firebase.js; fi
+if [ -f firebase.js ]
+then
+    rm firebase.js
+fi
 
 ## then build the file one line at a time:
 
