@@ -36,7 +36,7 @@ function App() {
     setInitialized(true);
     const imagesResponse = await getImages({});
     const authorsResponse = await getAuthors({});
-    const normalizedImages = normalizeData(imagesResponse._default);
+    const normalizedImages = normalizeData(imagesResponse?._default ?? []);
     const normalizedAuthors = normalizeData(authorsResponse.data._default);
     const formattedImages = addProperties(normalizedImages, normalizedAuthors);
 
@@ -81,7 +81,15 @@ function App() {
             onShuffle={shuffleImages}
           />
         </SiteDataContext.Provider>
-      )}
+      ) || <div style={{
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontSize: 24,
+        fontWeight: "700"
+      }}>No funny shots yet, please post hilarious shots in the hofun channel</div>}
     </div>
   );
 }
