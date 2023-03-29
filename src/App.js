@@ -71,7 +71,7 @@ function App() {
 
   return (
     <div className="image-grid">
-      {dataAvailable && (
+      {dataAvailable ? (
         <SiteDataContext.Provider value={contextProvider}>
           <ImageGridContainer 
             imageId={imageId} 
@@ -81,7 +81,7 @@ function App() {
             onShuffle={shuffleImages}
           />
         </SiteDataContext.Provider>
-      ) || <div style={{
+      ) : <div style={{
         width: "100vw",
         height: "100vh",
         display: "flex",
