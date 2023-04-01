@@ -154,7 +154,7 @@ export const normalizeData = (data) => {
   const entries = Object.entries(data);
 
   entries.forEach((item) => {
-    const id = item[0];
+    const id = item[0].replace("key-", "");
     let attributes = item[1];
     noramlizedData.push({ id, ...attributes });
   });
