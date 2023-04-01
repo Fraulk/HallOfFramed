@@ -164,11 +164,13 @@ export const normalizeData = (data) => {
 
 // add some properties to the image data that we'll need later
 export const addProperties = (images, authors) => {
+  console.log(images)
   for (let i = 0; i < images.length; i++) {
     images[i].authorid = images[i].author;
     const authorName = authors.find(
       (author) => author.authorid === images[i].authorid,
-    )?.authorNick ?? "Name not found in authorsdb";
+    )?.authorNick ?? images[i].authorName ?? "";
+    console.log(authorName)
     images[i].author = authorName;
     images[i].game = images[i].gameName;
     images[i].epochtime = images[i].epochTime;
